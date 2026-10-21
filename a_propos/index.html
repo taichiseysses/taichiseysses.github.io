@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -37,10 +39,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<img src="../logo.jpg" alt="Logo Les Chemins de l'Harmonie" class="logo-box">
 	<p class="eyebrow">Association à Seysses · Haute-Garonne</p>
 	<h1>À propos de l'association</h1>
-	<nav style="margin-top: 20px;">
-	  <a href="/" style="color:white; opacity:0.8; text-decoration: none; margin: 0 10px;">Accueil</a>
-	  <a href="/a_propos/" style="color:white; font-weight:bold; text-decoration: none; border-bottom: 2px solid white; padding-bottom: 3px; margin: 0 10px;">À propos</a>
-	</nav>
+	{% include menu.html %}
 </header>
 
 <div class="container">
