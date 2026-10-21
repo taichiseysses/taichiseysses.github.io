@@ -1,15 +1,28 @@
-<nav style="display:flex; flex-wrap:wrap; justify-content:center; gap:12px 22px; padding:15px; font-family:sans-serif; border-bottom:1px solid #eee;">
-  <a href="/" style="text-decoration:none; color:#2d5a27; font-weight:bold;">Accueil</a>
-  <a href="https://les-chemins-de-l-harmonie-seysses.s2.yapla.com/fr/membres/adhesion/" style="text-decoration:none; color:#333;">Espace membres / Adhésion</a>
-  <a href="https://les-chemins-de-l-harmonie-seysses.s2.yapla.com/fr/evenements" style="text-decoration:none; color:#333;">Événements</a>
-  <a href="https://les-chemins-de-l-harmonie-seysses.s2.yapla.com/fr/nouvelles" style="text-decoration:none; color:#333;">Nouvelles</a>
-  <a href="https://les-chemins-de-l-harmonie-seysses.s2.yapla.com/fr/boutique" style="text-decoration:none; color:#333;">Boutique</a>
-  <div style="position:relative;">
-    <a href="#" style="text-decoration:none; color:#333;">A propos ▾</a>
-    <div style="display:none; position:absolute; left:0; top:100%; background:white; border:1px solid #ddd; border-radius:8px; min-width:200px; z-index:10; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
-      <a href="/#apropos" style="display:block; padding:10px; text-decoration:none; color:#333;">Notre association</a>
-      <a href="https://fr.wikipedia.org/wiki/Tai-chi-chuan" target="_blank" style="display:block; padding:10px; text-decoration:none; color:#333; border-top:1px solid #eee;">Wiki Tai-chi-chuan ↗</a>
+<nav class="main-nav">
+  <a href="/" class="{% if page.url == '/' %}active{% endif %}">Accueil</a>
+
+  <div class="dropdown">
+    <span class="dropbtn">A propos ▾</span>
+    <div class="dropdown-content">
+      <a href="/#apropos">Notre association</a>
+      <a href="https://fr.wikipedia.org/wiki/Tai-chi-chuan" target="_blank">Wiki Tai-chi-chuan ↗</a>
     </div>
   </div>
+
+  <a href="https://les-chemins-de-l-harmonie-seysses.s2.yapla.com/fr/membres/adhesion/">Espace membres / Adhésion</a>
+  <a href="https://les-chemins-de-l-harmonie-seysses.s2.yapla.com/fr/evenements">Événements</a>
+  <a href="https://les-chemins-de-l-harmonie-seysses.s2.yapla.com/fr/nouvelles">Nouvelles</a>
+  <a href="https://les-chemins-de-l-harmonie-seysses.s2.yapla.com/fr/boutique">Boutique</a>
 </nav>
-<style>div:hover>div{display:block !important}</style>
+
+<style>
+.main-nav{ display:flex; flex-wrap:wrap; justify-content:center; gap:15px 25px; padding:16px; background:#2d5a27; font-family:sans-serif; align-items:center; }
+.main-nav > a, .main-nav .dropbtn{ text-decoration:none; color:#ffffff; font-weight:500; }
+.main-nav a.active{ border-bottom:2px solid #ffffff; padding-bottom:2px; }
+.dropdown{ position:relative; cursor:pointer; }
+.dropdown-content{ display:none; position:absolute; left:0; top:100%; background:#fff; min-width:220px; border:1px solid #ddd; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,.15); z-index:100; padding:5px 0; }
+.dropdown-content a{ display:block; padding:10px 15px; text-decoration:none; color:#333; }
+.dropdown-content a:hover{ background:#f2f7f2; }
+.dropdown:hover .dropdown-content{ display:block; }
+.dropbtn{ color:#fff; }
+</style>
